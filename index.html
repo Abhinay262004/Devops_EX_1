@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="countryClubApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Club - Your Dreamy Resort</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+</head>
+<body ng-controller="RoomController">
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">COUNTRY CLUB</div>
+      <div class="nav-links">
+        <a href="Home.html" class="home-btn">Home</a>
+        <a href="about -us.html" class="About-btn">About</a>
+        <a href="Rooms.html" class="Rooms-btn">Room</a>
+        <a href="signup.html" class="signup-btn">Signup</a>
+        <a href="login.html" class="login-btn">Login</a>
+                    
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>We Know What You Love</h1>
+  </section>
+
+  <!-- Room Rates Section -->
+  <section class="rooms">
+    <h2>Rooms And Rates</h2>
+    <div class="room-grid">
+      <div class="room" ng-repeat="room in rooms">
+        <img ng-src="{{room.image}}" alt="{{room.name}}">
+        <h3>{{room.name}}</h3>
+        <p>Price: Rs. {{room.price}}</p>
+        <p>Rating: {{room.rating}} Stars</p>
+        <button ng-click="bookRoom(room)">Book Now</button>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
